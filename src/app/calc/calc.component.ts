@@ -8,11 +8,27 @@ import { Component } from '@angular/core';
 export class CalcComponent {
   num1: number = 0;
   num2: number = 0;
-  sum: number = 0;
+  opt: string = '';
+  result: number = 0;
 
-  somar() {
-    this.sum = this.num1 + this.num2;
-    console.log(this.sum);
+  calc() {
+    switch (this.opt.toLowerCase()) {
+      case '+':
+        this.result = this.num1 + this.num2;
+        break;
+      case '-':
+        this.result = this.num1 - this.num2;
+        break;
+      case 'x':
+        this.result = this.num1 * this.num2;
+        break;
+      case '/':
+        this.result = this.num1 / this.num2;
+        break;
+      default:
+        alert('Opção inválida');
+    }
+    console.log(this.result);
   }
 
   getNum1(event: any) {
@@ -20,5 +36,8 @@ export class CalcComponent {
   }
   getNum2(event: any) {
     this.num2 = Number(event);
+  }
+  getOpt(event: any) {
+    this.opt = event;
   }
 }

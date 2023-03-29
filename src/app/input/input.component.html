@@ -1,14 +1,12 @@
 <div class="form-group">
   <label class="control-label">{{
-    name === "peso"
-      ? "Informe seu peso (kg)"
-      : "Informe sua altura (metro e cm)"
+    name === "N1" ? "1° Número" : "2° Número"
   }}</label>
   <input
     class="form-control"
     type="text"
     id="peso"
-    placeholder="{{ name === 'peso' ? 'Peso' : 'Altura' }}"
+    placeholder="Digite um número"
     [(ngModel)]="value"
     (change)="onChange()"
   />

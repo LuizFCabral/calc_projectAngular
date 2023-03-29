@@ -1,0 +1,12 @@
+select {
+  border-radius: 5px;
+  text-align: center;
+  width: 35%;
+  height: 30px;
+  font-size: large;
+  border-color: #007c8a;
+}
+
+.form-group {
+  margin-top: 15px;
+}

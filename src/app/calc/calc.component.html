@@ -2,14 +2,12 @@
   <div class="col-md-10">
     <section class="col-md-6">
       <div class="site-content">
-        <h2>Calculadora IMC</h2>
+        <h2>Calculadora Básica</h2>
         <div class="col-md-12">
-          <app-input
-            (sendValue)="getNum1($event)"
-            [name]="'altura'"
-          ></app-input>
-          <app-input (sendValue)="getNum2($event)" [name]="'peso'"></app-input>
-          <app-button (click)="somar()"></app-button>
+          <app-input (sendValue)="getNum1($event)" [name]="'N1'"></app-input>
+          <app-input (sendValue)="getNum2($event)" [name]="'N2'"></app-input>
+          <app-select (sendOpt)="getOpt($event)"></app-select>
+          <app-button (click)="calc()"></app-button>
         </div>
       </div>
     </section>

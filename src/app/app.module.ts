@@ -7,13 +7,15 @@ import { AppComponent } from './app.component';
 import { CalcComponent } from './calc/calc.component';
 import { InputComponent } from './input/input.component';
 import { ButtonComponent } from './button/button.component';
+import { SelectComponent } from './select/select.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CalcComponent,
     InputComponent,
-    ButtonComponent
+    ButtonComponent,
+    SelectComponent
   ],
   imports: [
     BrowserModule,
