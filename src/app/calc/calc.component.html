@@ -4,20 +4,14 @@
       <div class="site-content">
         <h2>Calculadora IMC</h2>
         <div class="col-md-12">
-          <app-input (sendValue)="getNum1($event)"></app-input>
-          <app-input (sendValue)="getNum2($event)"></app-input>
+          <app-input
+            (sendValue)="getNum1($event)"
+            [name]="'altura'"
+          ></app-input>
+          <app-input (sendValue)="getNum2($event)" [name]="'peso'"></app-input>
           <app-button (click)="somar()"></app-button>
         </div>
       </div>
     </section>
   </div>
 </form>
-<!--
-  
-  <form>
-    <input type="number" name="n1" placeholder="Número 1" [(ngModel)]="num1" />
-    <input type="number" name="n2" placeholder="Número 2" [(ngModel)]="num2" />
-    <button (click)="somar()">Somar</button>
-    <input type="text" readonly placeholder="Resposta" [value]="sum" />
-  </form>
--->
