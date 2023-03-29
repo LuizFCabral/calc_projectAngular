@@ -1,4 +1,10 @@
 <div class="form-group">
   <label class="control-label">Informe seu peso (kg)</label>
-  <input class="form-control" type="text" id="peso" />
+  <input
+    class="form-control"
+    type="text"
+    id="peso"
+    [(ngModel)]="value"
+    (change)="onChange()"
+  />
 </div>
