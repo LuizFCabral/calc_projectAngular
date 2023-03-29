@@ -10,6 +10,21 @@ export class CalcComponent {
   num2: number = 0;
   opt: string = '';
   result: number = 0;
+  visibility: boolean = false;
+
+  getNum1(event: any) {
+    this.num1 = Number(event);
+  }
+  getNum2(event: any) {
+    this.num2 = Number(event);
+  }
+  getOpt(event: any) {
+    this.opt = event;
+  }
+
+  show(bool: boolean) {
+    this.visibility = bool;
+  }
 
   calc() {
     switch (this.opt.toLowerCase()) {
@@ -28,16 +43,6 @@ export class CalcComponent {
       default:
         alert('Opção inválida');
     }
-    console.log(this.result);
-  }
-
-  getNum1(event: any) {
-    this.num1 = Number(event);
-  }
-  getNum2(event: any) {
-    this.num2 = Number(event);
-  }
-  getOpt(event: any) {
-    this.opt = event;
+    this.show(true);
   }
 }
